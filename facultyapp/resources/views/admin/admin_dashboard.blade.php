@@ -10,9 +10,10 @@
 
     <style>
         body{
-            width: 100%;
+   width: 100%;
     height: 100%;
-    background-image: url({{asset('upload/school1.jpg')}})
+    background-image: url({{asset('upload/school1.jpg')}}) ;
+ 
         }
 .sidebar {
   margin: 0;
@@ -102,7 +103,7 @@ div.content {
         
             <a href="{{route('all.teachers')}}">Teachers</a>
             <a href="{{route('all.students')}}">Students</a>
-            <a href="#">Courses</a>
+            <a href="{{route('all.courses')}}">Courses</a>
             <a href="#">Batches</a>
             <a href="#">Enrollment</a>
             <a href="#">Payment</a>

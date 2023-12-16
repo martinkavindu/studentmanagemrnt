@@ -65,6 +65,17 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
     
         });
 
+        //courses routes
+
+        Route::controller(CoursesController::class)->group(function(){
+
+            Route::get('/all/courses','AllCourses')->name('all.courses');
+            Route::get('/add/course', 'AddCourse')->name('add.course');
+            Route::post('/store/course','StoreCourse')->name('store.course');
+            Route::get('/edit/course','EditCourse')->name('edit.course');
+
+        });
+
  });
 
 
