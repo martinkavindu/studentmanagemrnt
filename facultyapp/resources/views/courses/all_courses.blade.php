@@ -33,8 +33,8 @@
  
                                         <td>
                                            
-                                            <a href="{{route('edit.course')}}" title="Edit  Course"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-                                            <a href="#" title=" Delete Course"><button class="btn btn-danger btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Delete</button></a>
+                                            <a href="{{route('edit.course',$item->id)}}" title="Edit  Course"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a href="{{route('delete.course',$item->id)}}" title=" Delete Course"><button class="btn btn-danger btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Delete</button></a>
  
                                         </td>
                                     </tr>

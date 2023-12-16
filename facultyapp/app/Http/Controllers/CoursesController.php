@@ -32,7 +32,29 @@ class CoursesController extends Controller
           
         ]);
 
-        return redirect()->route('all.courses')->with('message','course created successfully');
-       
+        return redirect()->route('all.courses')->with('message','course created successfully'); 
     }
+
+ public function EditCourse ($id){
+
+$courses = Courses::findOrFail($id);
+
+return view ('courses.edit_courses', compact('courses'));
+    }
+
+    public function UpdateCourse(Request $request){
+
+        $cid = $request->id;
+         
+        Courses::findOrFail($cid)->update([
+            'course_name'=>$request->course_name,
+            'syllabus'=>$request->syllabus,
+            'duration' =>$request->duration,
+        ]);
+
+        return redirect()->route('all.courses')->with('message','course updated successfully');
+
+
+    }
+
 }

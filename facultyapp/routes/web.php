@@ -72,7 +72,9 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
             Route::get('/all/courses','AllCourses')->name('all.courses');
             Route::get('/add/course', 'AddCourse')->name('add.course');
             Route::post('/store/course','StoreCourse')->name('store.course');
-            Route::get('/edit/course','EditCourse')->name('edit.course');
+            Route::get('/edit/course/{id}','EditCourse')->name('edit.course');
+            Route::post('/update/course/{id}','UpdateCourse')->name('update.course');
+            Route::get('/delete/course/{id}','DeleteCourse')->name('delete.course');
 
         });
 
