@@ -1,12 +1,12 @@
-@extends('Layout')
+@extends('admin.admin_dashboard')
 @section('content')
    
                 <div class="card">
                     <div class="card-header">
-                        <h2> Batches</h2>
+                        <h3> Batches</h3>
                     </div>
                     <div class="card-body">
-                        <a href="#" class="btn btn-success btn-sm" title="Add New course batch">
+                        <a href="{{route('add.batch')}}" class="btn btn-success btn-sm" title="Add New course batch">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
                         <br/>
