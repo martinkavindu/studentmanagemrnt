@@ -54,6 +54,13 @@ return view ('courses.edit_courses', compact('courses'));
 
         return redirect()->route('all.courses')->with('message','course updated successfully');
 
+    }
+
+    public function DeleteCourse($id){
+
+        Courses::findOrFail($id)->delete();
+
+        return redirect()->route('all.courses')->with('message','course deleted successfully');
 
     }
 
