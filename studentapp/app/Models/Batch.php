@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class batches extends Model
+class batch extends Model
 {
     protected $table ="batches";
     protected $primaryKey ="id";

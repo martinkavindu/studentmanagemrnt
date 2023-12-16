@@ -1,12 +1,10 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\http\Controllers\studentController;
-use App\http\Controllers\teacherController;
-use App\http\Controllers\courseController;
 
 /*
-|--------------------------------------------------------------------------
+|---------------------------------------artisan -----------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
@@ -17,11 +15,17 @@ use App\http\Controllers\courseController;
 */
 
 Route::get('/', function () {
-    return view('Layout');
+    return view('welcome');
 });
 
-Route::resource('students', studentController::class);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::resource('teachers', teacherController::class);
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::resource('courses', courseController::class);
+require __DIR__.'/auth.php';

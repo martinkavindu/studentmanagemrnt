@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Batch; // Use singular for the model name
+use App\Models\Batch; 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 
@@ -24,7 +24,7 @@ class batchController extends Controller
     {
         $input = $request->all();
         Batch::create($input);
-        return redirect('batches')->with('flash_message', 'Batch Added!');
+        return redirect('batches')->with('flash_message', 'batch Addedd!');
     }
 
     public function show(string $id): View
@@ -35,15 +35,15 @@ class batchController extends Controller
 
     public function edit(string $id): View
     {
-        $batch = Batch::find($id);
-        return view('batches.edit')->with('batch', $batch);
+        $batches = Batch::find($id);
+        return view('batches.edit')->with('batches', $batches);
     }
 
     public function update(Request $request, string $id):RedirectResponse
     {
         $batch = Batch::find($id);
         $input = $request->all();
-        $student->update($input);
+        $batch ->update($input);
         return redirect('batches')->with('flash_message', 'batch Updated!');
     }
     public function destroy(string $id):RedirectResponse
