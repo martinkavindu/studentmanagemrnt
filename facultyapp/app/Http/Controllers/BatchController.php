@@ -33,12 +33,9 @@ class BatchController extends Controller
             'end_date' =>$request->end_date,
 
         ]);
-        $notification = array(
-            'message'=>'New batch created successfully',
-            'alert-type' =>'success'
-        );
+       
 
-        return redirect()->route('all.batches')->with($notification);
+        return redirect()->route('all.batches')->with('message','batch added successfully');
     }
 
     public function EditBatch ($id){
@@ -67,7 +64,7 @@ class BatchController extends Controller
 
                 Batches::findOrFail($id)->delete();
 
-                return redirect()->route('all.batches');
+                return redirect()->route('all.batches')->with('message','batch deleted successfully');
             }
         
 }
