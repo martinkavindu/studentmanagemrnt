@@ -84,7 +84,10 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
 
             Route::get('/all/batches','AllBatches')->name('all.batches');
             Route::get('/add/batch','Addbatch')->name('add.batch');
-            Route::post('/store/course','StoreBatch')->name('store.batch');
+            Route::post('/store/batch','StoreBatch')->name('store.batch');
+            Route::get('/edit/batch/{id}','EditBatch')->name('edit.batch');
+
+            Route::post('/update/batch/{id}','UpdateBatch')->name('update.batch');
 
         });
 

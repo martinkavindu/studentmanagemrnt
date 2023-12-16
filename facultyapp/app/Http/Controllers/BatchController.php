@@ -36,4 +36,27 @@ class BatchController extends Controller
 
         return redirect()->route('all.batches');
     }
+
+    public function EditBatch ($id){
+
+        $batches = Batches::findOrFail($id);
+        
+        return view ('batch.edit_batch', compact('batches'));
+            }
+
+            public function UpdateBatch(Request $request){
+
+                $bid = $request->id;
+                 
+                Batches::findOrFail($bid)->update([
+                    'batch_code'=>$request->batch_code,
+                    'course_name'=>$request->course_name,
+                    'start_date' =>$request->start_date,
+                    'end_date' =>$request->end_date,
+                ]);
+        
+                return redirect()->route('all.batches')->with('message','batch updated successfully');
+        
+            }
+        
 }
