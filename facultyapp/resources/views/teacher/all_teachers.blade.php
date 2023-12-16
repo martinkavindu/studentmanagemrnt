@@ -33,7 +33,7 @@
                                         <td>
                             
                                             <a href="{{route('edit.teacher',$item->id)}}" title="Edit teacher"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-                                            <a href="{{route('delete.teacher',$item->id)}}" title="delete teacher"><button class="btn btn-danger btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Delete</button></a>
+                                            <a onclick="confirmation(event)" href="{{route('delete.teacher',$item->id)}}" title="delete teacher"><button class="btn btn-danger btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Delete</button></a>
                                         </td>
                                     </tr>
                                 @endforeach

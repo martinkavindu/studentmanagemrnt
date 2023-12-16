@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminController extends Controller
 {
@@ -40,6 +41,7 @@ public function StoreTeacher (Request $request) {
 
     $user->save();
 
+   // Alert::success('Teacher added successfully');
     return redirect()->route('all.teachers')->with('message','Teacher added successfuly');
 }
 

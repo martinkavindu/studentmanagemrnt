@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <title>student management system</title>
 
@@ -57,6 +58,10 @@ div.content {
   padding: 1px 16px;
   height: 1000px;
 }
+.swal-popup .swal-small {
+  width: 200px !important;
+  font-size: 14px !important; 
+}
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
@@ -82,6 +87,9 @@ div.content {
         </style>
 </head>
 <body>
+
+  @include('sweetalert::alert')
+
 <div class='container'>
     <div class="row">
         <div class='col-md-12'>
@@ -152,5 +160,30 @@ div.content {
 @endif
 
 
+<script>
+
+function confirmation(ev) {
+  ev.preventDefault();
+  var urlToRedirect = ev.currentTarget.getAttribute('href');
+  console.log(urlToRedirect);
+
+  swal({
+    title: 'Are you sure to delete',
+    icon: 'warning',
+    buttons: true,
+    dangerMode: true,
+    customClass: {
+      popup: 'swal-small', 
+    },
+  })
+
+  .then((willCancel) => {
+    if (willCancel) {
+      window.location.href = urlToRedirect;
+    }
+  });
+}
+
+  </script>
 </body>
 </html>
