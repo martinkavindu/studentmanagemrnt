@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\BatchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -75,6 +76,13 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
             Route::get('/edit/course/{id}','EditCourse')->name('edit.course');
             Route::post('/update/course/{id}','UpdateCourse')->name('update.course');
             Route::get('/delete/course/{id}','DeleteCourse')->name('delete.course');
+
+        });
+
+
+        Route::controller(BatchController::class)->group(function(){
+
+            Route::get('/all/batches','AllBatches')->name('all.batches');
 
         });
 

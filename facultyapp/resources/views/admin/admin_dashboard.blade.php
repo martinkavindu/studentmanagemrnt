@@ -104,7 +104,7 @@ div.content {
             <a href="{{route('all.teachers')}}">Teachers</a>
             <a href="{{route('all.students')}}">Students</a>
             <a href="{{route('all.courses')}}">Courses</a>
-            <a href="#">Batches</a>
+            <a href="{{route('all.batches')}}">Batches</a>
             <a href="#">Enrollment</a>
             <a href="#">Payment</a>
           </div>
