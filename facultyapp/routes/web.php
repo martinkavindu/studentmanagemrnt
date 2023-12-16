@@ -88,6 +88,7 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
             Route::get('/edit/batch/{id}','EditBatch')->name('edit.batch');
 
             Route::post('/update/batch/{id}','UpdateBatch')->name('update.batch');
+            Route::get('/delete/batch/{id}','DeleteBatch')->name('delete.batch');
 
         });
 

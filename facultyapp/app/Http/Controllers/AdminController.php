@@ -119,7 +119,7 @@ public function UpdateStudent(Request $request,$id){
     $user->phone = $request->phone;
     $user->email = $request->email;
     $user->address = $request->address;
-    $user->role = 'student';
+
     
     $user->save();
     

@@ -16,7 +16,7 @@
         <input type="text" name="address" id="address" value="{{$user->address}}" class="form-control"><br/>
         <label>Phone</label><br/>
         <input type="text" name="phone" id="phone" value="{{$user->phone}}" class="form-control"><br/>
-        <input type="submit"  class="btn btn-success"><br/>
+        <input type="submit" value="save" class="btn btn-success"><br/>
     </form>
    
   </div>

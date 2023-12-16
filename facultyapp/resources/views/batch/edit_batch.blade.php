@@ -5,8 +5,9 @@
   <div class="card-header">Edit Batch</div>
   <div class="card-body">
       
-      <form action="{{route('store.batch')}}" method="post">
+      <form action="{{route('store.batch',$batches->id)}}" method="post">
        @csrf
+       <input type="hidden" name="id" value="{{$batches->id}}">
         <label>Batch Code</label><br/>
         <input type="text" name="batch_code" id="batch_code" class="form-control"
         value="{{$batches->batch_code}}"><br/>

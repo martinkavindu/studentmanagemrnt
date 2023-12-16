@@ -34,7 +34,7 @@
  
                                         <td>
                                             <a href="{{route('edit.batch',$item->id)}}" title="edit batch"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-                                            <a href="" title="delete batch"><button class="btn btn-danger btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Delete</button></a>
+                                            <a href="{{route('delete.batch',$item->id)}}" title="delete batch"><button class="btn btn-danger btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Delete</button></a>
                             
                                         </td>
                                     </tr>
