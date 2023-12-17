@@ -14,7 +14,7 @@
         body{
    width: 100%;
     height: 100%;
-    background-image: url({{asset('upload/school1.jpg')}}) ;
+    background-image: url({{asset('upload/dash.jpg')}}) ;
  
         }
 .sidebar {
@@ -92,7 +92,7 @@ div.content {
 
 <div class='container'>
     <div class="row">
-        <div class='col-md-12'>
+        <div class='col-md-11'>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"><h3>Student Management App</h3></a>
@@ -107,7 +107,7 @@ div.content {
     </div>
 
     <div class='row'>
-    <div class="col-md-3">
+    <div class="col-md-2">
         <div class="sidebar">
         
             <a href="{{route('all.teachers')}}">Teachers</a>

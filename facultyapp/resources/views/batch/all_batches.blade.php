@@ -20,6 +20,7 @@
                                         <th>Course Name</th>
                                         <th>Start date</th>
                                         <th>End date</th>
+                                        <th>Action  </th>
                                        
                                     </tr>
                                 </thead>
