@@ -18,7 +18,7 @@
                                         <th>SI</th>
                                         <th>Enroll NO.</th>
                                         <th>Batch.</th>
-                                        <th>Student</th>
+                                        <th>Student Adm</th>
                                         <th>Join Date</th>
                                         <th>Fee</th>
                                         <th>Action</th>
@@ -29,9 +29,9 @@
                                 @foreach($enrollments as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->eroll_no}}</td>
-                                        <td>{{ $item->batch_id}}</td>
-                                        <td>{{ $item->student_id}}</td>
+                                        <td>{{ $item->enroll_code}}</td>
+                                        <td>{{ $item->batch_code}}</td>
+                                        <td>{{ $item->student_adm}}</td>
                                         <td>{{ $item->join_date}}</td>
                                         <td>{{ $item->fee}}</td>
  

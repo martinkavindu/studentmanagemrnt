@@ -8,7 +8,7 @@
       <form action="{{route('store.batch')}}" method="post">
        @csrf
         <label>Batch Code</label><br/>
-        <input type="text" name="batch_code" id="batch_code" class="form-control"><br/>
+        <input type="text" name="batch_code" id="batch_code" class="form-control" required><br/>
         <label>Course </label><br/>
        <!--<input type="text" name="course_name" id="course_name" class="form-control"><br/>-->
        <select name="course_name" id="course_name" class="form-select">
@@ -21,9 +21,9 @@
 
        </select>
         <label>Start Date</label><br/>
-        <input type="text" name="start_date" id="start_date" class="form-control" placeholder="YY-MM-DD"><br/>
+        <input type="date" name="start_date" id="start_date" class="form-control" placeholder="YY-MM-DD" required><br/>
         <label>End Date</label><br/>
-        <input type="text" name="end_date" id="end_date" class="form-control" placeholder="YY-MM-DD"><br/>
+        <input type="date" name="end_date" id="end_date" class="form-control" placeholder="YY-MM-DD" required><br/>
         <input type="submit" value="Save" class="btn btn-success"><br/>
     </form>
    

@@ -10,9 +10,9 @@ class Enrollments extends Model
     use HasFactory;
     protected $guarded= [];
 
-    /*
+    
    public function Batches(){
        return $this ->belongsTo(Batches::class);
    }
-   */
+   
 }

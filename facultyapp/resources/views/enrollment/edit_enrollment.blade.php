@@ -8,14 +8,14 @@
       <form action="{{route('update.enrollment',$enrollments->id)}}" method="post">
     @csrf
         <label>Enroll NO.</label><br/>
-        <input type="text" name="eroll_no" id="eroll_no" class="form-control"
-        value="{{$enrollments->eroll_no}}"><br/>
+        <input type="text" name="enroll_code" id="enroll_code" class="form-control"
+        value="{{$enrollments->enroll_code}}"><br/>
         <label>Batch</label><br/>
-        <input type="text" name="batch_id" id="batch_id" class="form-control"
-        value="{{$enrollments->batch_id}}"><br/>
+        <input type="text" name="batch_code" id="batch_code" class="form-control"
+        value="{{$enrollments->batch_code}}"><br/>
         <label>Student</label><br/>
-        <input type="text" name="student_id" id="student_id" class="form-control"
-        value="{{$enrollments->student_id}}"><br/>
+        <input type="text" name="student_adm" id="student_adm" class="form-control"
+        value="{{$enrollments->student_adm}}"><br/>
         <label>Join date</label><br/>
         <input type="date" name="join_date" id="join_date" class="form-control"
         value="{{$enrollments->join_date}}"><br/>

@@ -14,10 +14,10 @@
         <label>Course Name</label><br/>
         <input type="text" name="course_name" id="course_name" class="form-control" value="{{$batches->course_name}}"><br/>
         <label>Start Date</label><br/>
-        <input type="text" name="start_date" id="start_date" class="form-control" placeholder="YY-MM-DD"
+        <input type="date" name="start_date" id="start_date" class="form-control" placeholder="YY-MM-DD"
         value="{{$batches->start_date}}"><br/>
         <label>End Date</label><br/>
-        <input type="text" name="end_date" id="end_date" class="form-control" placeholder="YY-MM-DD"
+        <input type="date" name="end_date" id="end_date" class="form-control" placeholder="YY-MM-DD"
         value="{{$batches->end_date}}"><br/>
         <input type="submit" value="Save" class="btn btn-success"><br/>
     </form>
