@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\BatchController;
+use App\Http\Controllers\ErollmentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -91,6 +92,13 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
             Route::get('/delete/batch/{id}','DeleteBatch')->name('delete.batch');
 
         });
+
+        Route::controller(ErollmentController::class)->group(function(){
+
+            Route::get('/all/enrollments','AllEnrollments')->name('all.enrollments');
+
+        });
+
 
  });
 
