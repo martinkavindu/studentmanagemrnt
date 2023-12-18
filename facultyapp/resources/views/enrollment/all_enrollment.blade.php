@@ -6,7 +6,7 @@
                         <h2>Enrollment</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{route('add.course')}}" class="btn btn-success btn-sm" title="Add New course">
+                        <a href="{{route('add.enrollment')}}" class="btn btn-success btn-sm" title="Add New course">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
                         <br/>

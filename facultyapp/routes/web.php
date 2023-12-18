@@ -96,6 +96,7 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
         Route::controller(ErollmentController::class)->group(function(){
 
             Route::get('/all/enrollments','AllEnrollments')->name('all.enrollments');
+            Route::get('/add/enrollment','AddEnrollment')->name('add.enrollment');
 
         });
 

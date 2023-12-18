@@ -14,4 +14,9 @@ class ErollmentController extends Controller
         $enrollments = Enrollment::latest()->get();
         return view('enrollment.all_enrollment',compact('enrollments'));
     }
+
+    public function AddEnrollment(){
+
+        return view('enrollment.add_enrollment');
+    }
 }
