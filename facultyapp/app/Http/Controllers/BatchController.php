@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\auth;
 use App\Models\Batches;
+use App\Models\Courses;
 use Illuminate\Http\Request;
 
 class BatchController extends Controller
@@ -15,7 +16,11 @@ class BatchController extends Controller
 
     public function Addbatch (){
 
-        return view('batch.add_batch');
+$courses = Courses::pluck('course_name','id');
+
+return view('batch.add_batch',compact('courses'));
+
+       // return view('batch.add_batch');
     }
     public function StoreBatch(Request $request){
 

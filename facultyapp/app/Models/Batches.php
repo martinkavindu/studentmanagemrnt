@@ -9,4 +9,8 @@ class Batches extends Model
 {
     use HasFactory;
     protected $guarded= [];
+
+    public function Courses(){
+        return  $this ->belongsTo(Courses::class);
+    }
 }

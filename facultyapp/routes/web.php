@@ -97,6 +97,11 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
 
             Route::get('/all/enrollments','AllEnrollments')->name('all.enrollments');
             Route::get('/add/enrollment','AddEnrollment')->name('add.enrollment');
+            Route::post('/store/enrollment','StoreEnrollment')->name('store.enrollment');
+            Route::get('/edit/enrollment/{id}','EditEnrollment')->name('edit.enrollment');
+            Route::post('/update/enrollment/{id}','UpdateEnrollment')->name('update.enrollment');
+
+            Route::get('/delete/enrollment/{id}','DeleteEnrollment')->name('delete.enrollment');
 
         });
 

@@ -155,7 +155,7 @@ div.content {
         $('.toast').css('color', '#fff'); 
       }
     };
-    toastr.success("{{ Session::get('message') }}", 'Success!', { timeOut: 1000 });
+    toastr.success("{{ Session::get('message') }}", 'Success!', { timeOut: 3000 });
   </script>
 @endif
 

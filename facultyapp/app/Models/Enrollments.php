@@ -5,15 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Enrollment extends Model
+class Enrollments extends Model
 {
     use HasFactory;
     protected $guarded= [];
 
- /*
-public function Batches(){
-    return $this ->belongsTo(Batches::class);
-}
-*/
-
+    /*
+   public function Batches(){
+       return $this ->belongsTo(Batches::class);
+   }
+   */
 }

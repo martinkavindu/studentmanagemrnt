@@ -13,19 +13,15 @@ return new class extends Migration
     {
         Schema::create('enrollments', function (Blueprint $table) {
             $table->id();
-            $table->string('eroll_no');
-            $table->unsignedBigInteger('batch_id');
-            $table->unsignedBigInteger('student_id');
-            $table->date('join_date');
-            $table->double('fee');
-    
-           // $table->foreign('batch_id')->references('id')->on('batches')->onDelete('cascade');
-           // $table->foreign('student_id')->references('id')->on('users')->onDelete('cascade');
-    
+            $table->string('enroll_code');
+            $table->string('batch_code');
+            $table->string('student_adm');
+            $table->string('join_date')->nullable();
+            $table->string('fee')->nullable();
             $table->timestamps();
         });
     }
-    
+
     /**
      * Reverse the migrations.
      */
@@ -34,4 +30,3 @@ return new class extends Migration
         Schema::dropIfExists('enrollments');
     }
 };
- 

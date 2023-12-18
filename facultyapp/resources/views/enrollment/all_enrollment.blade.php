@@ -29,16 +29,16 @@
                                 @foreach($enrollments as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->enroll_no}}</td>
+                                        <td>{{ $item->eroll_no}}</td>
                                         <td>{{ $item->batch_id}}</td>
                                         <td>{{ $item->student_id}}</td>
-                                        <td>{{ $item->Join_date}}</td>
+                                        <td>{{ $item->join_date}}</td>
                                         <td>{{ $item->fee}}</td>
  
                                         <td>
                                            
-                                            <a href="{{route('edit.course',$item->id)}}" title="Edit  Course"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-                                            <a onclick="confirmation(event)" href="{{route('delete.course',$item->id)}}" title=" Delete Course"><button class="btn btn-danger btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Delete</button></a>
+                                          <a href="{{route('edit.enrollment',$item->id)}}" title="Edit  Course"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a onclick="confirmation(event)" href="{{route('delete.enrollment',$item->id)}}" title=" Delete Course"><button class="btn btn-danger btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>Delete</button></a>
  
                                         </td>
                                     </tr>
