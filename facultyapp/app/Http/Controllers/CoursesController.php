@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\auth;
 use App\Models\Courses;
+use App\Imports\CoursesImport;
 use Illuminate\Http\Request;
 
 class CoursesController extends Controller
@@ -62,6 +64,19 @@ return view ('courses.edit_courses', compact('courses'));
 
         return redirect()->route('all.courses')->with('message','course deleted successfully');
 
+    }
+
+public function ImportCourses(){
+
+    return view ('courses.import_courses');
+}
+
+
+    public function Import (Request $request){
+
+        Excel::import(new CoursesImport, $request->file('import_file'));
+
+        return redirect()->route('all.courses')->with('message','courses imported successfully');
     }
 
 }

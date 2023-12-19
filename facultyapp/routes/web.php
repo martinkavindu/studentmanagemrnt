@@ -80,6 +80,10 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
             Route::post('/update/course/{id}','UpdateCourse')->name('update.course');
             Route::get('/delete/course/{id}','DeleteCourse')->name('delete.course');
 
+            Route::get('/import/courses', 'ImportCourses')->name('import.courses');
+
+            Route::post('/import','Import')->name('import');
+
         });
 
 
@@ -106,6 +110,8 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
             Route::post('/update/enrollment/{id}','UpdateEnrollment')->name('update.enrollment');
 
             Route::get('/delete/enrollment/{id}','DeleteEnrollment')->name('delete.enrollment');
+
+            Route::get('/export','Export')->name('export') ;
 
         });
 

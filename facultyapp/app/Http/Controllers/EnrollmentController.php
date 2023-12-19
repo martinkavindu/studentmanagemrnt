@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\auth;
 use App\Models\Enrollments;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\EnrollmentsExport;
 use App\Models\Batches;
 
 class EnrollmentController extends Controller
@@ -67,4 +69,10 @@ class EnrollmentController extends Controller
         return redirect()->route('all.enrollments')->with('message','Enrollment deleted successfully');
     }
 
+    // exports
+
+    public function Export(){
+
+        return Excel::download(new EnrollmentsExport, 'enrollments.xlsx');
+    }
 }

@@ -9,6 +9,10 @@
                         <a href="{{route('add.enrollment')}}" class="btn btn-success btn-sm" title="Add New course">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+
+                        <a href="{{route('export')}}" class="btn btn-info btn-sm text-white" title="download all enrollments">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Download
+                        </a>
                         <br/>
                         <br/>
                         <div class="table-responsive">

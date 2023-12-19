@@ -9,6 +9,9 @@
                         <a href="{{route('add.course')}}" class="btn btn-success btn-sm" title="Add New course">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
+                        <a href="{{route('import.courses')}}" class="btn btn-info btn-sm" title="import courses">
+                            <i class="fa fa-plus" aria-hidden="true"></i>  Import
+                        </a>
                         <br/>
                         <br/>
                         <div class="table-responsive">
