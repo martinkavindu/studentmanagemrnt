@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App;
 use Auth;
 use App\Models\payment;
+use App\Models\Enrollments;
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
@@ -12,7 +13,7 @@ class ReportController extends Controller
     public function printReport($id)
     {
         $payment = payment::findOrFail($id);
-
+         $enrollment = Enrollments::findOrFail($id);
         $pdf = App::make('dompdf.wrapper');
 
         $print = "<div style='margin:20px;padding:20px;'>";
@@ -21,7 +22,7 @@ class ReportController extends Controller
         $print .= "<p> Receipt No: <b>" . $id . "</b> </p>";
         $print .= "<p>Date: <b>" . $payment->paid_date . "</b> </p>";
         $print .= "<p> Enrollment No : <b>" . $payment->enroll_code . "</b> </p>";
-        $print .= "<p> Student admission No :<b>" . $payment->student_adm . "</b> </p>";
+        $print .= "<p> Student admission No :<b>" . $enrollment->student_adm . "</b> </p>";
         $print .= "<hr/>";
         $print .= "<table style='width:100%;'>";
         $print .= "<tr>";
@@ -29,7 +30,7 @@ class ReportController extends Controller
         $print .= "<td> Amount </td>";
         $print .= "</tr>";
         $print .= "<tr>";
-        $print .= "<td> <h3>" . $payment->enroll_code . "</h3> </td>";
+        $print .= "<td> <h3> Batch" . $enrollment->batch_code . "</h3> </td>";
         $print .= "<td>  <h3> Ksh " . $payment->amount . "</h3> </td>";
         $print .= "</tr>";
         $print .= "</table>";
