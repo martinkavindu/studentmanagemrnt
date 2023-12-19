@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\BatchController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\EnrollmentController;
 use Illuminate\Support\Facades\Route;
 
@@ -93,6 +95,8 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
 
         });
 
+        //enrollment routes
+
         Route::controller(EnrollmentController::class)->group(function(){
 
             Route::get('/all/enrollments','AllEnrollments')->name('all.enrollments');
@@ -105,6 +109,23 @@ Route::get('/delete/student/{id}', 'DeleteStudent')->name('delete.student');
 
         });
 
+        //payment routes
+
+        Route::controller(PaymentController::class)->group(function(){
+
+            Route::get('/all/payments','AllPayments')->name('all.payments');
+            Route::get('/add/payment','AddPayment')->name('add.payment');
+            Route::post('/store/payment','StorePayment')->name('store.payment');
+            Route::get('/edit/payment/{id}','EditPayment')->name('edit.payment');
+            Route::post('/update/payment/{id}','UpdatePayment')->name('update.payment');
+            Route::get('/delete/payment/{id}','DeletePayment')->name('delete.payment');
+        });
+
+Route::controller(ReportController::class)->group (function(){
+
+    Route::get('/print/report/{id}', 'PrintReport')->name('print.report');
+
+});
 
  });
 
